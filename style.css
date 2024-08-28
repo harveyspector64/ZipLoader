@@ -1,0 +1,51 @@
+/* Basic reset for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Drag-and-drop zone styling */
+#drop-zone {
+    border: 2px dashed #ccc;
+    background-color: #fafafa;
+    padding: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background color when dragging over */
+#drop-zone.dragover {
+    background-color: #e0e0e0;
+}
+
+/* Button styling */
+#unpack-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#unpack-button:hover {
+    background-color: #0056b3;
+}
+
+/* Progress bar styling */
+#progress {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
