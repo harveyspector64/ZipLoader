@@ -33,6 +33,7 @@ function handleFiles(files) {
             updateProgress(`Ignored ${file.name} (not a zip file)`);
         }
     }
+    console.log('Files to unpack:', zipFiles);
 }
 
 // Unpack and save files when the button is clicked
@@ -49,7 +50,9 @@ unpackButton.addEventListener('click', () => {
 // Unpack zip files and save contents
 function unpackFiles(files) {
     files.forEach(file => {
+        console.log(`Unpacking: ${file.name}`);
         JSZip.loadAsync(file).then(zip => {
+            console.log(`Zip contents of ${file.name}:`, zip.files);
             return Promise.all(Object.keys(zip.files).map(async (fileName) => {
                 const zipFile = zip.files[fileName];
                 const blob = await zipFile.async('blob');
